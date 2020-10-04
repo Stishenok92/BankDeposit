@@ -44,7 +44,7 @@ namespace BankDepositLibrary
 
         public static double CalculateFinalDeposit(double startDeposit, double percent, int month)
         {
-            if (!(CheckContributionPercentage(percent)) || startDeposit <= DEPOSIT_ZERO)
+            if (!(CheckContributionPercentage(percent)) || startDeposit <= DEPOSIT_ZERO || month < 0)
             {
                 throw new ValidationException();
             }
